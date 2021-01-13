@@ -1,0 +1,16 @@
+[
+   {
+      "string": "daffa",
+      "integer": 45,
+      "float": 656,
+      "date": "2021-01-21",
+      "boolean": false
+   },
+   {
+      "string": "putra",
+      "integer": 3434,
+      "float": 53343,
+      "date": "2021-01-01",
+      "boolean": true
+   }
+]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+</link>
+
+<body class="body">
+
+    <div class="container">
+
+        <form action= "/edit/<%= id %>" method="POST">
+
+            <div class="input">
+            <h1>Edit Data</h1>
+            </div>
+
+            <div class="input">
+                <label for="exampleCheck1">ID</label>
+                <input class="id-edit" placeholder="" name="id" value="<%= Number(id) + 1 %>" >
+
+            </div>
+
+            <div class="input">
+                <label for="exampleCheck1">String</label>
+                <input class="input1" placeholder="String" name="string" value=" <%= item.string %>">
+            </div>
+
+            <div class="input">
+                <label for="exampleCheck1">Integer</label>
+                <input class="input1" placeholder="Integer" name="integer" value=" <%= item.integer %>">
+            </div>
+
+            <div class="input">
+                <label for="exampleCheck1">Float</label>
+                <input class="input1" placeholder="Float" name="float" value=" <%= item.float %>">
+            </div>
+
+            <div class="update">
+                <label for="exampleCheck1">Date</label>
+                <input class="update1" type="date" placeholder="Date" name="date" value=" <%= item.date %>">
+            </div>
+
+            <div class="input">
+                <label for="exampleCheck1">Boolean</label>
+                <select class="select-input" name="boolean" value=>
+                    <option value="" selected>choose the boolean ....</option>
+                    <option value="true" <%=item.boolean ? 'selected' :''%>>True</option>
+                    <option value="false" <%=!item.boolean ? 'selected' :''%>>False</option>
+                </select>
+
+            </div>
+
+            <button type="submit" class="Update">Update</button> 
+            <a href="/" class=" Back" >Back</a>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

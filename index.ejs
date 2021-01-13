@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREAD</title>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+</link>
+
+<body class="body">
+    <div class="container">
+
+        <div class="judul">
+            <h1>BREAD(Browse, Read, Edit, Add, Delete )</h1>
+            <h2>Filters</h2>
+        </div>
+
+        <div class="input">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">ID</label>
+            <input class="input1" placeholder="ID">
+        </div>
+
+        <div class="input">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">String</label>
+            <input class="input1" placeholder="String">
+        </div>
+
+        <div class="input">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheIck1">Integer</label>
+            <input class="input1" placeholder="Integer">
+        </div>
+
+        <div class="input">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">Float</label>
+            <input class="input1" placeholder="Float">
+        </div>
+
+        <div class="update">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">Date</label>
+            <input class="update1" type="date" placeholder="Date">
+            <p class="update2">To</p>
+            <input class="update2" type="date" placeholder="Date">
+        </div>
+
+        <div class="input">
+            <input class="point" type="checkbox" id="exampleCheck1">
+            <label for="exampleCheck1">Boolean</label>
+            <select class="select-input">
+                <option value="" selected>choose the boolean ....</option>
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+        </div>
+
+        <a href="/">
+            <button class="Search">Search</button>
+        </a>
+        
+        <center>
+            <table>
+                <thead class="colum">
+                    <tr" class="table">
+                        <th>ID</th>
+                        <th>String</th>
+                        <th>Integer</th>
+                        <th>Float</th>
+                        <th>Date</th>
+                        <th>Boolean</th>
+                        <th style="text-align: center;">Actions</th>
+                        </tr>
+                </thead>
+
+
+                <tbody style="width: 100%; background-color: white; color: black; ">
+                    <% data.forEach((data, index)=>{ %>
+                        <tr>
+                            <th class="Actions">
+                                <%= index + 1 %>
+                            </th>
+
+                            <td class="Actions">
+                                <%= data.string %>
+                            </td>
+
+                            <td class="Actions">
+                                <%= data.integer %>
+                            </td>
+
+                            <td class="Actions">
+                                <%= data.float %>
+                            </td>
+
+                            <td class="Actions">
+                                <%= data.date %>
+                            </td>
+
+                            <td class="Actions">
+                                <%= data.boolean %>
+                            </td>
+
+                            <td class="Actions" button type="submit">
+                                <a href="edit/<%= index %>">
+                                    <button class="Edit">Edit</button>
+                                </a>
+                                <a href="Delete/<%= index %>">
+                                    <button class="Delete">Delete</button>
+                                </a>
+                            </td>
+
+                        </tr>
+                        <% }); %>
+
+                </tbody>
+
+            </table>
+
+            <center>
+
+    </div>
+
+    <a href="add">
+        <button class="Search">Add</button>
+    </a>
+
+    </div>
+
+</body>
+
+</html>
